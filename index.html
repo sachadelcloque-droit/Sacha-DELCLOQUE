@@ -1018,21 +1018,21 @@
             card.classList.add('scale-95');
         }
 
-        function handleFormSubmit(event) {
+    function handleFormSubmit(event) {
             event.preventDefault();
-            closeContactModal();
             
-            // Toast notification feedback
-            const toast = document.getElementById('toast');
-            document.getElementById('toast-message').textContent = "Votre message a bien été simulé et transmis !";
-            toast.classList.remove('opacity-0', 'translate-y-10', 'pointer-events-none');
-            toast.classList.add('opacity-100', 'translate-y-0');
-
-            setTimeout(() => {
-                toast.classList.remove('opacity-100', 'translate-y-0');
-                toast.classList.add('opacity-0', 'translate-y-10', 'pointer-events-none');
-                document.getElementById('toast-message').textContent = "Adresse e-mail copié dans le presse-papier !";
-            }, 3500);
+            // Récupération des champs du formulaire
+            const name = encodeURIComponent(document.querySelector('input[placeholder*="Cabinet"]').value || 'Visiteur du portfolio');
+            const emailInput = document.querySelector('input[type="email"]').value;
+            const subject = encodeURIComponent(document.querySelector('input[placeholder*="Proposition"]').value || 'Contact depuis le portfolio');
+            const message = encodeURIComponent(document.querySelector('textarea').value || '');
+            
+            const body = `Nom / Entreprise : ${name}%0DE-mail du contact : ${emailInput}%0D%0DMessage :%0D${message}`;
+            
+            // Ouvre le client mail du visiteur avec vos coordonnées pré-remplies
+            window.location.href = `mailto:sacha.delcloque@gmail.com?subject=${subject}&body=${body}`;
+            
+            closeContactModal();
         }
 
         // 6. Scroll Reveal Observer
