@@ -1,6 +1,11 @@
-⚖️ Sacha DELCLOQUE — Juriste d'Entreprise
+# ⚖️ Sacha DELCLOQUE — Juriste d'Entreprise
 
-Jeune juriste basé à Lille[cite: 5], je suis actuellement en Master Finance et Droit à l'IAE de Lille[cite: 5], après un Master en Droit de l'Entreprise spécialisé en *contract management* et recouvrement de créances[cite: 5]. Alliant rigueur juridique et vision stratégique[cite: 5], je mets mes compétences pratiques et mon autonomie au service de projets ambitieux[cite: 5].
+![Statut](https://img.shields.io/badge/Statut-À_la_recherche_d'opportunités-blue)
+![Localisation](https://img.shields.io/badge/Localisation-Lille%2C_France-lightgrey)
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-Sacha_Delcloque-blue?logo=linkedin)](https://www.linkedin.com/in/sacha-delcloque)
+[![Email](https://img.shields.io/badge/Email-sacha.delcloque%40gmail.com-red?logo=gmail)](mailto:sacha.delcloque@gmail.com)
+
+Jeune juriste basé à Lille, je suis actuellement en Master Finance et Droit à l'IAE de Lille, après un Master en Droit de l'Entreprise spécialisé en *contract management* et recouvrement de créances[cite: 5]. Alliant rigueur juridique et vision stratégique, je mets mes compétences pratiques et mon autonomie au service de projets ambitieux[cite: 5].
 
 ---
 
@@ -27,9 +32,9 @@ Jeune juriste basé à Lille[cite: 5], je suis actuellement en Master Finance et
 
 ## 🛠️ Compétences & Atouts
 
-* **Compétences juridiques :** Maîtrise du langage et des bases juridiques[cite: 5], gestion de contrats, droit du travail, recouvrement[cite: 5].
-* **Outils informatiques :** Word, Excel, Canva[cite: 5].
-* **Langues :** Français (Natif), Anglais[cite: 5].
+* **Domaines juridiques :** ![Droit](https://img.shields.io/badge/Droit_des_affaires-Contrats_%2F_Recouvrement-green) ![Langage](https://img.shields.io/badge/Maîtrise-Bases_juridiques-orange)[cite: 5]
+* **Outils informatiques :** ![Word](https://img.shields.io/badge/Word-Blue) ![Excel](https://img.shields.io/badge/Excel-Green) ![Canva](https://img.shields.io/badge/Canva-Cyan)[cite: 5]
+* **Langues :** ![Français](https://img.shields.io/badge/Français-Natif-blue) ![Anglais](https://img.shields.io/badge/Anglais-Professionnel-blue)[cite: 5]
 * **Qualités personnelles :** Consciencieux, autonomie, prise de responsabilités, curiosité intellectuelle et forte capacité d'adaptation[cite: 5].
 
 ---
@@ -38,11 +43,3 @@ Jeune juriste basé à Lille[cite: 5], je suis actuellement en Master Finance et
 
 * **Associatif :** Membre de l'association caritative *Amis des Trolls* (Université de Lille), participation bénévole à une association sportive et encadrant bénévole d'une course à pied[cite: 5].
 * **Centres d'intérêt :** Le sport en général (judo, football, tennis, callisthénie, NFL), automobile, nouvelles technologies et réseaux sociaux[cite: 5].
-
----
-
-## 📫 Me contacter
-
-* **Email :** sacha.delcloque@gmail.com[cite: 5]
-* **LinkedIn :** [Sacha Delcloque](https://www.linkedin.com/in/sacha-delcloque)[cite: 5]
-* **Localisation :** Lille, France[cite: 5]
