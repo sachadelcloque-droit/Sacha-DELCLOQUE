@@ -1,6 +1,6 @@
-title : "DELCLOQUE Sacha"
-Logo: ./img/P1033627.JPG
-Description: "Porfolio Juriste droit des affaires, droit des sociétés, droit des entreprises
-show-downloads: true
-thème: jekyll-theme-minimal
+title: "DELCLOQUE Sacha"
+logo: ./img/P1033627.JPG
+description: "Portfolio Juriste droit des affaires, droit des sociétés, droit des entreprises"
+show_downloads: true
+theme: jekyll-theme-cayman
 lang: fr
