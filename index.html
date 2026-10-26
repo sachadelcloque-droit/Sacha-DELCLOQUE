@@ -153,13 +153,13 @@
         <!-- Hero / Profile Section -->
         <section id="profil" class="py-16 md:py-24 relative overflow-hidden bg-gradient-to-b from-nightBlue via-nightBlue to-emeraldDeep text-white">
             <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#0e9f78_1px,transparent_1px)] [background-size:16px_16px]"></div>
-            
+
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-                    
+
                     <!-- Text Info Column -->
                     <div class="lg:col-span-7 space-y-6 reveal-on-scroll">
-                        
+
                         <!-- Status Banner -->
                         <div class="inline-flex items-center space-x-3 bg-nightBlueLight/80 border border-emeraldGlow/30 backdrop-blur-md px-4 py-2 rounded-full">
                             <span class="w-3 h-3 bg-emeraldGlow rounded-full pulse-dot"></span>
@@ -190,7 +190,7 @@
                             </div>
                         </div>
 
-                      <!-- Action Buttons -->
+                        <!-- Action Buttons -->
                         <div class="flex flex-wrap gap-4 pt-2">
                             <button type="button" id="openContact" class="px-7 py-3.5 rounded-xl bg-emeraldGlow hover:bg-emeraldLight text-nightBlue hover:text-white font-bold text-base transition-all duration-300 shadow-lg hover:shadow-emeraldGlow/30 flex items-center space-x-2">
                                 <i class="fa-solid fa-paper-plane"></i>
@@ -203,87 +203,22 @@
                         </div>
                     </div>
 
-                    <div id="contactModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
-        <div class="relative w-full max-w-md rounded-2xl bg-nightBlue border border-emeraldGlow/30 p-6 shadow-2xl">
-            <button type="button" id="closeContact" aria-label="Fermer" class="absolute top-4 right-4 text-gray-400 hover:text-white transition">
-                <i class="fa-solid fa-xmark text-xl"></i>
-            </button>
-
-            <h3 id="contactTitle" class="text-xl font-bold text-white mb-5">Me contacter</h3>
-
-            <div class="space-y-3">
-                <div class="flex items-center justify-between gap-3 rounded-xl bg-white/5 p-3">
-                    <div class="flex items-center gap-3 min-w-0">
-                        <i class="fa-solid fa-envelope text-emeraldGlow"></i>
-                        <span class="text-white text-sm truncate">sacha.delcloque@gmail.com</span>
-                    </div>
-                    <button type="button" data-copy="sacha.delcloque@gmail.com" class="copy-btn shrink-0 px-3 py-1.5 rounded-lg bg-emeraldGlow text-nightBlue text-xs font-bold hover:bg-emeraldLight transition">Copier</button>
-                </div>
-
-                <div class="flex items-center justify-between gap-3 rounded-xl bg-white/5 p-3">
-                    <div class="flex items-center gap-3 min-w-0">
-                        <i class="fa-solid fa-phone text-emeraldGlow"></i>
-                        <span class="text-white text-sm">07 69 77 82 28</span>
-                    </div>
-                    <button type="button" data-copy="07 69 77 82 28" class="copy-btn shrink-0 px-3 py-1.5 rounded-lg bg-emeraldGlow text-nightBlue text-xs font-bold hover:bg-emeraldLight transition">Copier</button>
-                </div>
-
-                <div class="flex items-center justify-between gap-3 rounded-xl bg-white/5 p-3">
-                    <div class="flex items-center gap-3 min-w-0">
-                        <i class="fa-solid fa-location-dot text-emeraldGlow"></i>
-                        <span class="text-white text-sm">16 bis Rue Delézenne,<br>59900 Lille</span>
-                    </div>
-                    <button type="button" data-copy="16 bis Rue Delézenne, 59900 Lille" class="copy-btn shrink-0 px-3 py-1.5 rounded-lg bg-emeraldGlow text-nightBlue text-xs font-bold hover:bg-emeraldLight transition">Copier</button>
-                </div>
-            </div>
-
-            <a href="mailto:sacha.delcloque@gmail.com?subject=Prise%20de%20contact%20depuis%20votre%20portfolio" class="mt-5 block text-center text-sm text-emeraldGlow hover:text-white underline transition">
-                Ou ouvrir ma messagerie
-            </a>
-        </div>
-    </div>
-
-    <script>
-        (function () {
-            const modal = document.getElementById('contactModal');
-            const open = () => modal.classList.remove('hidden');
-            const close = () => modal.classList.add('hidden');
-
-            document.getElementById('openContact').addEventListener('click', open);
-            document.getElementById('closeContact').addEventListener('click', close);
-            modal.addEventListener('click', e => { if (e.target === modal) close(); });
-            document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
-
-            modal.querySelectorAll('.copy-btn').forEach(btn => {
-                btn.addEventListener('click', async () => {
-                    try {
-                        await navigator.clipboard.writeText(btn.dataset.copy);
-                        const old = btn.textContent;
-                        btn.textContent = 'Copié ✓';
-                        setTimeout(() => (btn.textContent = old), 1500);
-                    } catch (err) {
-                        console.error('Copie impossible', err);
-                    }
-                });
-            });
-        })();
-    </script>
                     <!-- Profile Image & Badge Column -->
                     <div class="lg:col-span-5 flex justify-center lg:justify-end reveal-on-scroll">
                         <div class="relative w-72 h-72 sm:w-80 sm:h-80 lg:w-96 lg:h-96">
                             <!-- Decorative Glow Rings -->
                             <div class="absolute -inset-4 rounded-3xl bg-gradient-to-r from-emeraldGlow to-emeraldDeep opacity-40 blur-xl"></div>
-                            
+
                             <!-- Main Container -->
                             <div class="relative w-full h-full rounded-3xl overflow-hidden border-2 border-emeraldGlow/40 shadow-2xl bg-nightBlueLight">
-                                <img src="img/P1033627.JPG" 
-                                     alt="Sacha Delcloque - Juriste" 
+                                <img src="img/P1033627.JPG"
+                                     alt="Sacha Delcloque - Juriste"
                                      class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
                                      style="object-position: center 25%;"
                                      onerror="this.onerror=null; this.src='https://placehold.co/400x400/054433/ffffff?text=Sacha+Delcloque';">
-                                
+
                                 <div class="absolute inset-0 bg-gradient-to-t from-nightBlue via-transparent to-transparent opacity-40"></div>
-                                
+
                                 <!-- Encadré discret positionné EN HAUT pour ne pas cacher le visage -->
                                 <div class="absolute top-4 left-4 right-4 bg-nightBlue/90 backdrop-blur-md px-4 py-2.5 rounded-2xl border border-white/10 flex items-center justify-between">
                                     <div class="flex items-center space-x-3">
@@ -308,7 +243,7 @@
         <!-- Academic Formation Section -->
         <section id="formation" class="py-20 bg-cream">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
                     <span class="text-emeraldDeep font-bold text-sm tracking-widest uppercase bg-emeraldDeep/10 px-4 py-1.5 rounded-full">Parcours Académique</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-nightBlue mt-4">Formations & Diplômes d'Excellence</h2>
@@ -316,7 +251,7 @@
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    
+
                     <!-- Formation Card 1: IAE Lille -->
                     <div class="glass-card rounded-2xl p-8 shadow-lg hover:shadow-xl transition-all duration-300 border-t-4 border-emeraldDeep flex flex-col justify-between reveal-on-scroll">
                         <div>
@@ -330,9 +265,9 @@
                             </div>
                             <p class="text-sm font-semibold text-emeraldDeep mt-1">IAE Lille University School of Management</p>
                             <p class="text-xs text-gray-500 mb-4">Ingénierie financière, audit & régulation</p>
-                            
+
                             <hr class="border-gray-100 my-4">
-                            
+
                             <ul class="space-y-2 text-sm text-gray-700">
                                 <li class="flex items-start space-x-2">
                                     <i class="fa-solid fa-check text-emeraldDeep text-xs mt-1"></i>
@@ -366,9 +301,9 @@
                             </div>
                             <p class="text-sm font-semibold text-nightBlue mt-1">Université de Lille - Faculté de Droit</p>
                             <p class="text-xs text-gray-500 mb-4">Parcours Recouvrement de créances et management</p>
-                            
+
                             <hr class="border-gray-100 my-4">
-                            
+
                             <ul class="space-y-2 text-sm text-gray-700">
                                 <li class="flex items-start space-x-2">
                                     <i class="fa-solid fa-check text-nightBlue text-xs mt-1"></i>
@@ -402,9 +337,9 @@
                             </div>
                             <p class="text-sm font-semibold text-emeraldDeep mt-1">Institut Catholique de Lille (ICL)</p>
                             <p class="text-xs text-gray-500 mb-4">Faculté de Droit (FLD)</p>
-                            
+
                             <hr class="border-gray-100 my-4">
-                            
+
                             <ul class="space-y-2 text-sm text-gray-700">
                                 <li class="flex items-start space-x-2">
                                     <i class="fa-solid fa-check text-emeraldDeep text-xs mt-1"></i>
@@ -432,7 +367,7 @@
         <!-- Professional Experiences Section (Accordion Interactive) -->
         <section id="experiences" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
                     <span class="text-emeraldDeep font-bold text-sm tracking-widest uppercase bg-emeraldDeep/10 px-4 py-1.5 rounded-full">Parcours Professionnel</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-nightBlue mt-4">Expériences Récentes & Missions</h2>
@@ -467,7 +402,7 @@
                                 <p class="leading-relaxed">
                                     Gestion autonome d'un portefeuille de créances au sein de Concilian (Wasquehal), filiale de la Société Générale. Mise en œuvre des stratégies d'amiable et suivi rigoureux des procédures judiciaires en étroite collaboration avec les commissaires de justice et avocats. Expérience achevée.
                                 </p>
-                                
+
                                 <h4 class="font-bold text-nightBlue text-xs uppercase tracking-wider pt-2">Missions Principales :</h4>
                                 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     <li class="flex items-start space-x-2 bg-white p-3 rounded-xl border border-gray-200/60">
@@ -521,7 +456,7 @@
                                 <p class="leading-relaxed">
                                     Immersion au cœur de la direction juridique d'un leader mondial de la sidérurgie. Appui aux juristes d'affaires sur les problématiques contractuelles et de conformité réglementaire.
                                 </p>
-                                
+
                                 <h4 class="font-bold text-nightBlue text-xs uppercase tracking-wider pt-2">Missions Principales :</h4>
                                 <ul class="grid grid-cols-1 sm:grid-cols-2 gap-3">
                                     <li class="flex items-start space-x-2 bg-white p-3 rounded-xl border border-gray-200/60">
@@ -550,7 +485,7 @@
         <!-- Competences & Skills Section (Interactive Filter) -->
         <section id="competences" class="py-20 bg-cream">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll">
                     <span class="text-emeraldDeep font-bold text-sm tracking-widest uppercase bg-emeraldDeep/10 px-4 py-1.5 rounded-full">Savoir-Faire</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-nightBlue mt-4">Compétences & Domaines d'Expertise</h2>
@@ -648,7 +583,7 @@
         <!-- Engagements & Passions Section -->
         <section id="engagements" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                
+
                 <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
                     <span class="text-emeraldDeep font-bold text-sm tracking-widest uppercase bg-emeraldDeep/10 px-4 py-1.5 rounded-full">Au-delà du droit</span>
                     <h2 class="text-3xl sm:text-4xl font-extrabold text-nightBlue mt-4">Engagements & Centres d'Intérêt</h2>
@@ -697,7 +632,7 @@
         <!-- CTA / Contact Section Banner -->
         <section id="contact" class="py-20 bg-gradient-to-br from-nightBlue to-emeraldDeep text-white relative overflow-hidden">
             <div class="absolute inset-0 opacity-10 bg-[radial-gradient(#ffffff_1px,transparent_1px)] [background-size:20px_20px]"></div>
-            
+
             <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal-on-scroll">
                 <span class="text-emeraldGlow font-bold text-sm tracking-widest uppercase bg-nightBlueLight px-4 py-1.5 rounded-full border border-emeraldGlow/30">Opportunités Professionnelles</span>
                 <h2 class="text-3xl sm:text-5xl font-extrabold mt-6 mb-4 tracking-tight">Prêt à renforcer votre équipe juridique ?</h2>
@@ -705,11 +640,10 @@
                     Diplômé en droit des entreprises et en attente des résultats du Master en finance, je suis à l'écoute d'opportunités à Lille (Contract Management, Juriste d'entreprise, Contentieux).
                 </p>
                 <div class="flex flex-wrap justify-center gap-4">
-                   <a href="www.linkedin.com/in/sacha-delcloque-0a8aa7251" class="px-8 py-4 rounded-xl bg-emeraldGlow hover:bg-emeraldLight text-nightBlue hover:text-white font-bold text-base transition-all duration-300 shadow-xl flex items-center space-x-2">
-    <i class="fa-brands fa-linkedin text-lg"></i>
-    <span>Me contacter sur LinkedIn</span>
-</a>
-                    </button>
+                    <a href="https://www.linkedin.com/in/sacha-delcloque-0a8aa7251" target="_blank" rel="noopener" class="px-8 py-4 rounded-xl bg-emeraldGlow hover:bg-emeraldLight text-nightBlue hover:text-white font-bold text-base transition-all duration-300 shadow-xl flex items-center space-x-2">
+                        <i class="fa-brands fa-linkedin text-lg"></i>
+                        <span>Me contacter sur LinkedIn</span>
+                    </a>
                     <button onclick="copyEmail()" class="px-8 py-4 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-base backdrop-blur-md border border-white/20 transition-all duration-300 flex items-center space-x-2">
                         <i class="fa-solid fa-copy text-emeraldGlow"></i>
                         <span>Copier mon adresse e-mail</span>
@@ -728,61 +662,63 @@
                 </div>
                 <span class="text-white font-bold tracking-tight">Sacha Delcloque</span>
             </div>
-            
+
             <p class="text-xs text-gray-500 text-center">
                 © 2026 Sacha Delcloque. Tous droits réservés. Portfolio hébergé sur GitHub Pages.
             </p>
 
             <div class="flex items-center space-x-4">
-                <a href="www.linkedin.com/in/sacha-delcloque-0a8aa7251" target="_blank" aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-emeraldDeep flex items-center justify-center text-gray-300 hover:text-white transition-colors">
+                <a href="https://www.linkedin.com/in/sacha-delcloque-0a8aa7251" target="_blank" rel="noopener" aria-label="LinkedIn" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-emeraldDeep flex items-center justify-center text-gray-300 hover:text-white transition-colors">
                     <i class="fa-brands fa-linkedin-in text-sm"></i>
                 </a>
-                <button onclick="copyEmail()" aria-label="Envoyer un e-mail" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-emeraldDeep flex items-center justify-center text-gray-300 hover:text-white transition-colors">
+                <button onclick="copyEmail()" aria-label="Copier l'adresse e-mail" class="w-10 h-10 rounded-xl bg-white/5 hover:bg-emeraldDeep flex items-center justify-center text-gray-300 hover:text-white transition-colors">
                     <i class="fa-solid fa-envelope text-sm"></i>
                 </button>
             </div>
         </div>
     </footer>
 
-    <!-- Contact Modal -->
-    <div id="contact-modal" class="fixed inset-0 bg-nightBlue/80 backdrop-blur-md z-50 flex items-center justify-center p-4 opacity-0 pointer-events-none transition-all duration-300">
-        <div id="modal-card" class="bg-white rounded-3xl max-w-lg w-full p-8 shadow-2xl transform scale-95 transition-all duration-300 relative border border-emeraldDeep/10">
-            <button onclick="closeContactModal()" aria-label="Fermer la fenêtre" class="absolute top-6 right-6 text-gray-400 hover:text-nightBlue p-2">
+    <!-- Fenêtre modale coordonnées -->
+    <div id="contactModal" class="hidden fixed inset-0 z-50 items-center justify-center p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+        <div class="relative w-full max-w-md rounded-2xl bg-nightBlue border border-emeraldGlow/30 p-6 shadow-2xl text-white">
+            <button type="button" id="closeContact" aria-label="Fermer" class="absolute top-4 right-4 text-gray-400 hover:text-white transition">
                 <i class="fa-solid fa-xmark text-xl"></i>
             </button>
 
-            <div class="mb-6">
-                <h3 class="text-2xl font-extrabold text-nightBlue">Envoyer un Message</h3>
-                <p class="text-sm text-gray-500 mt-1">Ce formulaire ouvrira votre messagerie pour écrire directement à Sacha Delcloque.</p>
+            <h3 id="contactTitle" class="text-xl font-bold text-white mb-5">Me contacter</h3>
+
+            <div class="space-y-3">
+                <!-- Email -->
+                <div class="flex items-center justify-between gap-3 rounded-xl bg-white/5 p-3">
+                    <div class="flex items-center gap-3 min-w-0">
+                        <i class="fa-solid fa-envelope text-emeraldGlow"></i>
+                        <span class="text-white text-sm truncate">sacha.delcloque@gmail.com</span>
+                    </div>
+                    <button type="button" data-copy="sacha.delcloque@gmail.com" class="copy-btn shrink-0 px-3 py-1.5 rounded-lg bg-emeraldGlow text-nightBlue text-xs font-bold hover:bg-emeraldLight hover:text-white transition">Copier</button>
+                </div>
+
+                <!-- Téléphone -->
+                <div class="flex items-center justify-between gap-3 rounded-xl bg-white/5 p-3">
+                    <div class="flex items-center gap-3 min-w-0">
+                        <i class="fa-solid fa-phone text-emeraldGlow"></i>
+                        <span class="text-white text-sm">07 69 77 82 28</span>
+                    </div>
+                    <button type="button" data-copy="07 69 77 82 28" class="copy-btn shrink-0 px-3 py-1.5 rounded-lg bg-emeraldGlow text-nightBlue text-xs font-bold hover:bg-emeraldLight hover:text-white transition">Copier</button>
+                </div>
+
+                <!-- Adresse -->
+                <div class="flex items-center justify-between gap-3 rounded-xl bg-white/5 p-3">
+                    <div class="flex items-center gap-3 min-w-0">
+                        <i class="fa-solid fa-location-dot text-emeraldGlow"></i>
+                        <span class="text-white text-sm">16 bis Rue Delézenne,<br>59900 Lille</span>
+                    </div>
+                    <button type="button" data-copy="16 bis Rue Delézenne, 59900 Lille" class="copy-btn shrink-0 px-3 py-1.5 rounded-lg bg-emeraldGlow text-nightBlue text-xs font-bold hover:bg-emeraldLight hover:text-white transition">Copier</button>
+                </div>
             </div>
 
-            <!-- Formulaire relié au client mail par défaut -->
-            <form id="contactForm" onsubmit="handleFormSubmit(event)" class="space-y-4">
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-nightBlue mb-1">Votre Nom / Entreprise</label>
-                    <input type="text" id="contactName" required placeholder="ex: Cabinet Martin / RH Tech" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-emeraldDeep text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-nightBlue mb-1">Votre E-mail</label>
-                    <input type="email" id="contactEmail" required placeholder="nom@entreprise.com" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-emeraldDeep text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-nightBlue mb-1">Sujet</label>
-                    <input type="text" id="contactSubject" required placeholder="Proposition de poste / Prise de contact" class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-emeraldDeep text-sm">
-                </div>
-                <div>
-                    <label class="block text-xs font-bold uppercase tracking-wider text-nightBlue mb-1">Message</label>
-                    <textarea id="contactMessage" rows="4" required placeholder="Votre message..." class="w-full px-4 py-3 rounded-xl border border-gray-200 focus:outline-none focus:border-emeraldDeep text-sm"></textarea>
-                </div>
-                <div class="flex items-center justify-end space-x-3 pt-2">
-                    <button type="button" onclick="closeContactModal()" class="px-5 py-2.5 rounded-xl border border-gray-300 text-gray-700 text-sm font-semibold hover:bg-gray-50 transition-colors">
-                        Annuler
-                    </button>
-                    <button type="submit" class="px-6 py-2.5 rounded-xl bg-emeraldDeep hover:bg-emeraldLight text-white text-sm font-bold shadow-md transition-all">
-                        Envoyer
-                    </button>
-                </div>
-            </form>
+            <a href="mailto:sacha.delcloque@gmail.com?subject=Prise%20de%20contact%20depuis%20votre%20portfolio" class="mt-5 block text-center text-sm text-emeraldGlow hover:text-white underline transition">
+                Ou ouvrir ma messagerie
+            </a>
         </div>
     </div>
 
@@ -854,7 +790,7 @@
         // 4. Copy Email & Toast Notification
         function copyEmail() {
             const email = "sacha.delcloque@gmail.com";
-            
+
             // Clipboard fallback
             const tempInput = document.createElement("input");
             tempInput.value = email;
@@ -875,40 +811,46 @@
             }, 3000);
         }
 
-        // 5. Contact Modal Toggle
-        function openContactModal() {
-            const modal = document.getElementById('contact-modal');
-            const card = document.getElementById('modal-card');
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-            modal.classList.add('opacity-100');
-            card.classList.remove('scale-95');
-            card.classList.add('scale-100');
-        }
+        // 5. Fenêtre modale coordonnées (email, téléphone, adresse)
+        (function () {
+            const modal = document.getElementById('contactModal');
+            const openBtn = document.getElementById('openContact');
+            const closeBtn = document.getElementById('closeContact');
 
-        function closeContactModal() {
-            const modal = document.getElementById('contact-modal');
-            const card = document.getElementById('modal-card');
-            modal.classList.remove('opacity-100');
-            modal.classList.add('opacity-0', 'pointer-events-none');
-            card.classList.remove('scale-100');
-            card.classList.add('scale-95');
-        }
+            const openModal = () => {
+                modal.classList.remove('hidden');
+                modal.classList.add('flex');
+            };
+            const closeModal = () => {
+                modal.classList.add('hidden');
+                modal.classList.remove('flex');
+            };
 
-        function handleFormSubmit(event) {
-            event.preventDefault();
-            
-            const name = encodeURIComponent(document.getElementById('contactName').value);
-            const emailInput = document.getElementById('contactEmail').value;
-            const subject = encodeURIComponent(document.getElementById('contactSubject').value);
-            const message = encodeURIComponent(document.getElementById('contactMessage').value);
-            
-            const body = `Nom / Entreprise : ${name}%0DE-mail du contact : ${emailInput}%0D%0DMessage :%0D${message}`;
-            
-            // Ouvre le client de messagerie par défaut du visiteur avec votre e-mail et les champs pré-remplis
-            window.location.href = `mailto:sacha.delcloque@gmail.com?subject=${subject}&body=${body}`;
-            
-            closeContactModal();
-        }
+            openBtn.addEventListener('click', openModal);
+            closeBtn.addEventListener('click', closeModal);
+            modal.addEventListener('click', e => { if (e.target === modal) closeModal(); });
+            document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+            modal.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', async () => {
+                    const text = btn.dataset.copy;
+                    try {
+                        await navigator.clipboard.writeText(text);
+                    } catch (err) {
+                        // Fallback si l'API clipboard n'est pas disponible
+                        const tmp = document.createElement('input');
+                        tmp.value = text;
+                        document.body.appendChild(tmp);
+                        tmp.select();
+                        document.execCommand('copy');
+                        document.body.removeChild(tmp);
+                    }
+                    const old = btn.textContent;
+                    btn.textContent = 'Copié ✓';
+                    setTimeout(() => (btn.textContent = old), 1500);
+                });
+            });
+        })();
 
         // 6. Scroll Reveal Observer
         document.addEventListener("DOMContentLoaded", function () {
