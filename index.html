@@ -192,10 +192,94 @@
 
                         <!-- Action Buttons -->
                         <div class="flex flex-wrap gap-4 pt-2">
-                           <a href="mailto:sacha.delcloque@gmail.com?subject=Prise%20de%20contact%20depuis%20votre%20portfolio" class="px-7 py-3.5 rounded-xl bg-emeraldGlow hover:bg-emeraldLight text-nightBlue hover:text-white font-bold text-base transition-all duration-300 shadow-lg hover:shadow-emeraldGlow/30 flex items-center space-x-2">
+  <!-- Bouton -->
+  <button type="button" id="openContact"
+    class="px-7 py-3.5 rounded-xl bg-emeraldGlow hover:bg-emeraldLight text-nightBlue hover:text-white font-bold text-base transition-all duration-300 shadow-lg hover:shadow-emeraldGlow/30 flex items-center space-x-2">
     <i class="fa-solid fa-paper-plane"></i>
     <span>Prendre contact</span>
-</a>
+  </button>
+
+  <!-- Fenêtre modale -->
+  <div id="contactModal" class="hidden fixed inset-0 z-50 flex items-center justify-center p-4 bg-black/60 backdrop-blur-sm" role="dialog" aria-modal="true" aria-labelledby="contactTitle">
+    <div class="relative w-full max-w-md rounded-2xl bg-nightBlue border border-emeraldGlow/30 p-6 shadow-2xl">
+      <button type="button" id="closeContact" aria-label="Fermer"
+        class="absolute top-4 right-4 text-gray-400 hover:text-white transition">
+        <i class="fa-solid fa-xmark text-xl"></i>
+      </button>
+
+      <h3 id="contactTitle" class="text-xl font-bold text-white mb-5">Me contacter</h3>
+
+      <div class="space-y-3">
+        <!-- Email -->
+        <div class="flex items-center justify-between gap-3 rounded-xl bg-white/5 p-3">
+          <div class="flex items-center gap-3 min-w-0">
+            <i class="fa-solid fa-envelope text-emeraldGlow"></i>
+            <span class="text-white text-sm truncate">sacha.delcloque@gmail.com</span>
+          </div>
+          <button type="button" data-copy="sacha.delcloque@gmail.com"
+            class="copy-btn shrink-0 px-3 py-1.5 rounded-lg bg-emeraldGlow text-nightBlue text-xs font-bold hover:bg-emeraldLight transition">
+            Copier
+          </button>
+        </div>
+
+        <!-- Téléphone -->
+        <div class="flex items-center justify-between gap-3 rounded-xl bg-white/5 p-3">
+          <div class="flex items-center gap-3 min-w-0">
+            <i class="fa-solid fa-phone text-emeraldGlow"></i>
+            <span class="text-white text-sm">07 69 77 82 28</span>
+          </div>
+          <button type="button" data-copy="07 69 77 82 28"
+            class="copy-btn shrink-0 px-3 py-1.5 rounded-lg bg-emeraldGlow text-nightBlue text-xs font-bold hover:bg-emeraldLight transition">
+            Copier
+          </button>
+        </div>
+
+        <!-- Adresse -->
+        <div class="flex items-center justify-between gap-3 rounded-xl bg-white/5 p-3">
+          <div class="flex items-center gap-3 min-w-0">
+            <i class="fa-solid fa-location-dot text-emeraldGlow"></i>
+            <span class="text-white text-sm">16 bis Rue Delézenne,<br>59900 Lille</span>
+          </div>
+          <button type="button" data-copy="16 bis Rue Delézenne, 59900 Lille"
+            class="copy-btn shrink-0 px-3 py-1.5 rounded-lg bg-emeraldGlow text-nightBlue text-xs font-bold hover:bg-emeraldLight transition">
+            Copier
+          </button>
+        </div>
+      </div>
+
+      <a href="mailto:sacha.delcloque@gmail.com?subject=Prise%20de%20contact%20depuis%20votre%20portfolio"
+         class="mt-5 block text-center text-sm text-emeraldGlow hover:text-white underline transition">
+        Ou ouvrir ma messagerie
+      </a>
+    </div>
+  </div>
+
+  <script>
+    (function () {
+      const modal = document.getElementById('contactModal');
+      const open = () => modal.classList.remove('hidden');
+      const close = () => modal.classList.add('hidden');
+
+      document.getElementById('openContact').addEventListener('click', open);
+      document.getElementById('closeContact').addEventListener('click', close);
+      modal.addEventListener('click', e => { if (e.target === modal) close(); });
+      document.addEventListener('keydown', e => { if (e.key === 'Escape') close(); });
+
+      modal.querySelectorAll('.copy-btn').forEach(btn => {
+        btn.addEventListener('click', async () => {
+          try {
+            await navigator.clipboard.writeText(btn.dataset.copy);
+            const old = btn.textContent;
+            btn.textContent = 'Copié ✓';
+            setTimeout(() => (btn.textContent = old), 1500);
+          } catch (err) {
+            console.error('Copie impossible', err);
+          }
+        });
+      });
+    })();
+  </script>
+</div>
                             <button onclick="copyEmail()" class="px-7 py-3.5 rounded-xl bg-white/10 hover:bg-white/20 text-white font-semibold text-base backdrop-blur-md border border-white/20 transition-all duration-300 flex items-center space-x-2">
                                 <i class="fa-solid fa-copy text-emeraldGlow"></i>
                                 <span>Copier l'Email</span>
