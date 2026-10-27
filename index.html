@@ -500,81 +500,103 @@
             </div>
         </section>
 
-       <!-- Section Compétences -->
-        <section id="competences" class="py-20 bg-white">
+       <!-- Competences & Skills Section (Interactive Filter) -->
+        <section id="competences" class="py-20 bg-cream">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-                    <span class="text-emeraldDeep font-bold text-sm tracking-widest uppercase bg-emeraldDeep/10 px-4 py-1.5 rounded-full">Compétences</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-nightBlue mt-4">Domaines d'Expertise</h2>
+
+                <div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll">
+                    <span class="text-emeraldDeep font-bold text-sm tracking-widest uppercase bg-emeraldDeep/10 px-4 py-1.5 rounded-full">Savoir-Faire</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-nightBlue mt-4">Compétences & Domaines d'Expertise</h2>
+                    <p class="text-gray-600 mt-3 text-base">Une double casquette juridique et financière pour répondre aux exigences des directions juridiques et financières.</p>
                 </div>
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-center justify-center">
-                    <!-- Anciens blocs non alignés ou sujets aux sauts d'affichage -->
+
+                <!-- Skill Filter Tabs -->
+                <div class="flex flex-wrap justify-center gap-2 mb-12 reveal-on-scroll">
+                    <button onclick="filterSkills('all')" class="skill-tab-btn active px-5 py-2.5 rounded-xl text-sm font-semibold bg-emeraldDeep text-white shadow-md transition-all duration-300">Toutes</button>
+                    <button onclick="filterSkills('droit')" class="skill-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-nightBlue hover:bg-gray-100 shadow-sm transition-all duration-300">Droit des Affaires</button>
+                    <button onclick="filterSkills('finance')" class="skill-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-nightBlue hover:bg-gray-100 shadow-sm transition-all duration-300">Finance & Chiffres</button>
+                    <button onclick="filterSkills('outils')" class="skill-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-nightBlue hover:bg-gray-100 shadow-sm transition-all duration-300">Outils & Logiciels</button>
+                    <button onclick="filterSkills('soft')" class="skill-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-nightBlue hover:bg-gray-100 shadow-sm transition-all duration-300">Soft Skills</button>
+                </div>
+
+                <!-- Skills Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+
+                    <!-- Skill 1 -->
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="droit">
+                        <div class="w-12 h-12 rounded-xl bg-emeraldDeep/10 text-emeraldDeep flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-file-contract"></i>
+                        </div>
+                        <h3 class="font-bold text-nightBlue text-lg mb-2">Contract Management</h3>
+                        <p class="text-sm text-gray-600">Rédaction, négociation et sécurisation des contrats commerciaux et partenariats.</p>
+                    </div>
+
+                    <!-- Skill 2 -->
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="droit">
+                        <div class="w-12 h-12 rounded-xl bg-emeraldDeep/10 text-emeraldDeep flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-scale-unbalanced"></i>
+                        </div>
+                        <h3 class="font-bold text-nightBlue text-lg mb-2">Recouvrement & Contentieux</h3>
+                        <p class="text-sm text-gray-600">Maîtrise des procédures amiables et judiciaires (injonctions de payer, exécution forcée).</p>
+                    </div>
+
+                    <!-- Skill 3 -->
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="finance">
+                        <div class="w-12 h-12 rounded-xl bg-nightBlue/10 text-nightBlue flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-coins"></i>
+                        </div>
+                        <h3 class="font-bold text-nightBlue text-lg mb-2">Analyse Financière</h3>
+                        <p class="text-sm text-gray-600">Lecture de bilans, analyse de la solvabilité des entreprises et évaluation des risques.</p>
+                    </div>
+
+                    <!-- Skill 4 -->
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="finance">
+                        <div class="w-12 h-12 rounded-xl bg-nightBlue/10 text-nightBlue flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-building-columns"></i>
+                        </div>
+                        <h3 class="font-bold text-nightBlue text-lg mb-2">Conformité & Régulation</h3>
+                        <p class="text-sm text-gray-600">Veille réglementaire, respect des normes bancaires, RSE et droit des sociétés.</p>
+                    </div>
+
+                    <!-- Skill 5 -->
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="outils">
+                        <div class="w-12 h-12 rounded-xl bg-emeraldDeep/10 text-emeraldDeep flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-table"></i>
+                        </div>
+                        <h3 class="font-bold text-nightBlue text-lg mb-2">Excel & Outils de Gestion</h3>
+                        <p class="text-sm text-gray-600">Maîtrise des tableaux croisés dynamiques, formules avancées et ERP de recouvrement.</p>
+                    </div>
+
+                    <!-- Skill 6 -->
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="outils">
+                        <div class="w-12 h-12 rounded-xl bg-emeraldDeep/10 text-emeraldDeep flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-laptop-code"></i>
+                        </div>
+                        <h3 class="font-bold text-nightBlue text-lg mb-2">Bases de données juridiques</h3>
+                        <p class="text-sm text-gray-600">Utilisation experte des portails de recherche juridique (Dalloz, LexisNexis, Légifrance).</p>
+                    </div>
+
+                    <!-- Skill 7 -->
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="soft">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-700 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-comments"></i>
+                        </div>
+                        <h3 class="font-bold text-nightBlue text-lg mb-2">Négociation & Persuasion</h3>
+                        <p class="text-sm text-gray-600">Capacité à trouver des compromis et à mener des négociations difficiles en phase amiable.</p>
+                    </div>
+
+                    <!-- Skill 8 -->
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="soft">
+                        <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-700 flex items-center justify-center text-xl font-bold mb-4">
+                            <i class="fa-solid fa-shield-halved"></i>
+                        </div>
+                        <h3 class="font-bold text-nightBlue text-lg mb-2">Rigueur & Esprit d'analyse</h3>
+                        <p class="text-sm text-gray-600">Traitement méthodique de dossiers complexes sous contrainte de délais stricts.</p>
+                    </div>
+
                 </div>
             </div>
         </section>
-
-        <!-- Section Compétences -->
-        <section id="competences" class="py-20 bg-white">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-
-                <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
-                    <span class="text-emeraldDeep font-bold text-sm tracking-widest uppercase bg-emeraldDeep/10 px-4 py-1.5 rounded-full">Expertise</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-nightBlue mt-4">Compétences & Outils</h2>
-                    <p class="text-gray-600 mt-3 text-base">Une vision transversale entre rigueur juridique et maîtrise financière.</p>
-                </div>
-
-                <!-- Grille stabilisée : items-start et justify-start empêchent les décalages intempestifs à gauche -->
-                <div class="grid grid-cols-1 md:grid-cols-3 gap-8 items-start justify-start">
-
-                    <!-- Bloc 1 : Droit des Affaires -->
-                    <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-200 bg-white flex flex-col h-full reveal-on-scroll">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl bg-emeraldDeep text-white flex items-center justify-center font-bold">
-                                <i class="fa-solid fa-scale-balanced"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-nightBlue">Droit des Affaires</h3>
-                        </div>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li>• Recouvrement amiable et judiciaire</li>
-                            <li>• Contract Management</li>
-                            <li>• Procédures collectives & sûretés</li>
-                        </ul>
-                    </div>
-
-                    <!-- Bloc 2 : Finance & Chiffres -->
-                    <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-200 bg-white flex flex-col h-full reveal-on-scroll">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl bg-emeraldDeep text-white flex items-center justify-center font-bold">
-                                <i class="fa-solid fa-chart-pie"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-nightBlue">Finance & Chiffres</h3>
-                        </div>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li>• Analyse financière & Évaluation</li>
-                            <li>• Gestion de trésorerie</li>
-                            <li>• Audit et régulation bancaire</li>
-                        </ul>
-                    </div>
-
-                    <!-- Bloc 3 : Outils & Soft Skills -->
-                    <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-200 bg-white flex flex-col h-full reveal-on-scroll">
-                        <div class="flex items-center space-x-3 mb-4">
-                            <div class="w-10 h-10 rounded-xl bg-emeraldDeep text-white flex items-center justify-center font-bold">
-                                <i class="fa-solid fa-toolbox"></i>
-                            </div>
-                            <h3 class="text-lg font-bold text-nightBlue">Outils & Soft Skills</h3>
-                        </div>
-                        <ul class="space-y-2 text-sm text-gray-700">
-                            <li>• Pack Office / Excel Avancé</li>
-                            <li>• Négociation & Gestion du stress</li>
-                            <li>• Rigueur et esprit d'équipe</li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div>
-        </section>
-
         <!-- Engagements & Passions Section -->
         <section id="engagements" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
