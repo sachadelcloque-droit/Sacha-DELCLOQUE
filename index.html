@@ -500,14 +500,15 @@
             </div>
         </section>
 
-        <!-- Competences & Skills Section (Interactive Filter) -->
-        <section id="competences" class="py-20 bg-cream">
+      <!-- Section Compétences (Corrigée et unifiée) -->
+        <section id="competences" class="py-20 bg-white">
             <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
 
-                <div class="text-center max-w-3xl mx-auto mb-12 reveal-on-scroll">
-                    <span class="text-emeraldDeep font-bold text-sm tracking-widest uppercase bg-emeraldDeep/10 px-4 py-1.5 rounded-full">Savoir-Faire</span>
-                    <h2 class="text-3xl sm:text-4xl font-extrabold text-nightBlue mt-4">Compétences & Domaines d'Expertise</h2>
-                    <p class="text-gray-600 mt-3 text-base">Une double casquette juridique et financière pour répondre aux exigences des directions juridiques et financières.</p>
+                <!-- En-tête de section -->
+                <div class="text-center max-w-3xl mx-auto mb-16 reveal-on-scroll">
+                    <span class="text-emeraldDeep font-bold text-sm tracking-widest uppercase bg-emeraldDeep/10 px-4 py-1.5 rounded-full">Expertise</span>
+                    <h2 class="text-3xl sm:text-4xl font-extrabold text-nightBlue mt-4">Compétences & Outils</h2>
+                    <p class="text-gray-600 mt-3 text-base">Une vision transversale entre rigueur juridique et maîtrise financière.</p>
                 </div>
 
                 <!-- Skill Filter Tabs -->
@@ -519,11 +520,11 @@
                     <button onclick="filterSkills('soft')" class="skill-tab-btn px-5 py-2.5 rounded-xl text-sm font-semibold bg-white text-nightBlue hover:bg-gray-100 shadow-sm transition-all duration-300">Soft Skills</button>
                 </div>
 
-                <!-- Skills Grid -->
-                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Skills Grid stabilisée (alignée à gauche et en haut) -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 items-start justify-start">
 
                     <!-- Skill 1 -->
-                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="droit">
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll flex flex-col h-full" data-category="droit">
                         <div class="w-12 h-12 rounded-xl bg-emeraldDeep/10 text-emeraldDeep flex items-center justify-center text-xl font-bold mb-4">
                             <i class="fa-solid fa-file-contract"></i>
                         </div>
@@ -532,7 +533,7 @@
                     </div>
 
                     <!-- Skill 2 -->
-                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="droit">
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll flex flex-col h-full" data-category="droit">
                         <div class="w-12 h-12 rounded-xl bg-emeraldDeep/10 text-emeraldDeep flex items-center justify-center text-xl font-bold mb-4">
                             <i class="fa-solid fa-scale-unbalanced"></i>
                         </div>
@@ -541,7 +542,7 @@
                     </div>
 
                     <!-- Skill 3 -->
-                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="finance">
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll flex flex-col h-full" data-category="finance">
                         <div class="w-12 h-12 rounded-xl bg-nightBlue/10 text-nightBlue flex items-center justify-center text-xl font-bold mb-4">
                             <i class="fa-solid fa-coins"></i>
                         </div>
@@ -550,7 +551,7 @@
                     </div>
 
                     <!-- Skill 4 -->
-                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="finance">
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll flex flex-col h-full" data-category="finance">
                         <div class="w-12 h-12 rounded-xl bg-nightBlue/10 text-nightBlue flex items-center justify-center text-xl font-bold mb-4">
                             <i class="fa-solid fa-building-columns"></i>
                         </div>
@@ -559,7 +560,7 @@
                     </div>
 
                     <!-- Skill 5 -->
-                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="outils">
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll flex flex-col h-full" data-category="outils">
                         <div class="w-12 h-12 rounded-xl bg-emeraldDeep/10 text-emeraldDeep flex items-center justify-center text-xl font-bold mb-4">
                             <i class="fa-solid fa-table"></i>
                         </div>
@@ -568,7 +569,7 @@
                     </div>
 
                     <!-- Skill 6 -->
-                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="outils">
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll flex flex-col h-full" data-category="outils">
                         <div class="w-12 h-12 rounded-xl bg-emeraldDeep/10 text-emeraldDeep flex items-center justify-center text-xl font-bold mb-4">
                             <i class="fa-solid fa-laptop-code"></i>
                         </div>
@@ -577,7 +578,7 @@
                     </div>
 
                     <!-- Skill 7 -->
-                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="soft">
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll flex flex-col h-full" data-category="soft">
                         <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-700 flex items-center justify-center text-xl font-bold mb-4">
                             <i class="fa-solid fa-comments"></i>
                         </div>
@@ -586,7 +587,7 @@
                     </div>
 
                     <!-- Skill 8 -->
-                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll" data-category="soft">
+                    <div class="skill-item glass-card p-6 rounded-2xl shadow-sm hover:shadow-md transition-all duration-300 reveal-on-scroll flex flex-col h-full" data-category="soft">
                         <div class="w-12 h-12 rounded-xl bg-amber-500/10 text-amber-700 flex items-center justify-center text-xl font-bold mb-4">
                             <i class="fa-solid fa-shield-halved"></i>
                         </div>
